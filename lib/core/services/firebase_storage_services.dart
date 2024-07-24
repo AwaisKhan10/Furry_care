@@ -6,6 +6,9 @@ import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/cupertino.dart';
 
 class FirebaseStorageService {
+  ///
+  /// Upload Single File
+  ///
   Future<String> uploadImage(File image, String folderName) async {
     var fileName = image.path.split("/").last;
 
@@ -25,7 +28,8 @@ class FirebaseStorageService {
   }
 
   ///
-  /// Get list of images urls
+  /// Upload Multiple File
+  ///
   Future<List<String>> uploadImagesList(
       List<File> images, String folderName) async {
     List<String> imagesUrl = [];
